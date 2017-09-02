@@ -8,9 +8,28 @@ public class LinkedList {
 		node.setNextNode(headNode);
 		this.headNode = node;
 	}
-	
+
 	public void deleteFromHead() {
 		headNode = headNode.getNextNode();
+	}
+
+	public void deleteSpecificNode(int dataToDelete) {
+		Node currentNode = headNode;
+		Node previousNode = null;
+
+		while (currentNode != null) {
+			if (currentNode.getData() == dataToDelete) {
+				// If is the head node
+				if (previousNode == null) {
+					deleteFromHead();
+				} else {
+					previousNode.setNextNode(currentNode.getNextNode());
+				}
+			}
+			previousNode = currentNode;
+			currentNode = currentNode.getNextNode();
+		}
+
 	}
 
 	public int length() {
@@ -25,7 +44,19 @@ public class LinkedList {
 
 		return length;
 	}
-	
+
+	public Node search(int item) {
+		Node currentNode = headNode;
+		while (currentNode != null) {
+			if (currentNode.getData() == item) {
+				return currentNode;
+			}
+			currentNode = currentNode.getNextNode();
+		}
+
+		return null;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder stringBuilder = new StringBuilder();
