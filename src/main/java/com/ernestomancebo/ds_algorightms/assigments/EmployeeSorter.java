@@ -1,4 +1,4 @@
-package com.ernestomancebo.ds_algorightms.sort.assigments;
+package com.ernestomancebo.ds_algorightms.assigments;
 
 import java.util.Arrays;
 

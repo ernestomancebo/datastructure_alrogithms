@@ -7,6 +7,20 @@ public class DoublyEndedLinkedList {
 	private Node headNode;
 	private Node tailNode;
 
+	public Node getHead() {
+		return headNode;
+	}
+
+	public Node deleteFromHead() {
+		Node returnNode = headNode;
+
+		if (headNode != null) {
+			headNode = headNode.getNextNode();
+		}
+
+		return returnNode;
+	}
+
 	public void insertAtTail(Node newNode) {
 
 		// If there's no head, the new node is the head
@@ -21,6 +35,19 @@ public class DoublyEndedLinkedList {
 
 		// Either there's a tail or not, the new node is the new tail
 		tailNode = newNode;
+	}
+
+	public int length() {
+		int length = 0;
+		Node currentNode = headNode;
+
+		while (currentNode != null) {
+			length++;
+			currentNode = currentNode.getNextNode();
+
+		}
+
+		return length;
 	}
 
 	@Override
