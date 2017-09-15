@@ -16,4 +16,15 @@ public class InsertionSortTest {
 
 		assertArrayEquals(inputValues, resultValues);
 	}
+	
+	@Test
+	public void sortAssertGapPasses() {
+		int[] inputValues = { 9, 3, 5, 1, 8, 2 };
+		final int[] resultValues = { 5, 3, 8, 1, 9, 2  };
+
+		InsertionSort sorter = new InsertionSort();
+		sorter.sort(inputValues, 0, 2);
+
+		assertArrayEquals(inputValues, resultValues);
+	}
 }

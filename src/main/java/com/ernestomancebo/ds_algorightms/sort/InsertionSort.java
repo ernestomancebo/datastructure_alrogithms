@@ -11,18 +11,30 @@ package com.ernestomancebo.ds_algorightms.sort;
  */
 public class InsertionSort implements Sorter {
 
-	public void sort(int[] data) {
+	/**
+	 * Does the Insertion Sort algorithm. Takes a gap interval as parameter
+	 */
+	public void sort(int[] data, int startPosition, int gap) {
 
-		for (int i = 0; i < data.length; i++) {
+		for (int i = startPosition; i < data.length; i += gap) {
 			int currentItem = data[i];
-			int j = i - 1;
+			int j = i - gap;
 
-			while (j >= 0 && data[j] > currentItem) {
-				data[j + 1] = data[j];
-				j--;
+			while (j >= startPosition && data[j] > currentItem) {
+				data[j + gap] = data[j];
+				j -= gap;
 			}
-			data[j + 1] = currentItem;
+			data[j + gap] = currentItem;
 		}
+	}
+
+	/**
+	 * Implements the Insertion Sort algorithm. 1 is the default gap interval.
+	 * 
+	 * @see com.ernestomancebo.ds_algorightms.sort.Sorter#sort(int[])
+	 */
+	public void sort(int[] data) {
+		sort(data, 0, 1);
 	}
 
 }
