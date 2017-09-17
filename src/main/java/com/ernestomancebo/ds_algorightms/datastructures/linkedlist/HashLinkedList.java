@@ -3,6 +3,9 @@ package com.ernestomancebo.ds_algorightms.datastructures.linkedlist;
 public class HashLinkedList<k, v> {
     private HashNode<k, v> headNode;
 
+    public HashLinkedList() {
+    }
+
     public HashLinkedList(k key, v data) {
         headNode = new HashNode<k, v>(key, data);
     }
@@ -52,7 +55,7 @@ public class HashLinkedList<k, v> {
     public HashNode<k, v> search(k key) {
         HashNode<k, v> currentNode = headNode;
         while (currentNode != null) {
-            if (currentNode.getKey() == key) {
+            if (currentNode.getKey().equals(key)) {
                 return currentNode;
             }
             currentNode = currentNode.getNextNode();
@@ -71,7 +74,10 @@ public class HashLinkedList<k, v> {
         while (currentNode != null) {
             stringBuilder.append("data: ");
             stringBuilder.append(currentNode.getData());
-
+            stringBuilder.append(" - ");
+            stringBuilder.append("key: ");
+            stringBuilder.append(currentNode.getKey());
+            
             currentNode = currentNode.getNextNode();
 
             if (currentNode != null) {
