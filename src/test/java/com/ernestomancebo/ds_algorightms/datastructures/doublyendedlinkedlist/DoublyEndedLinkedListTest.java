@@ -4,8 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.ernestomancebo.ds_algorightms.datastructures.doublyendedlinkedlist.DoublyEndedLinkedList;
-import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.Node;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.DoublyEndedLinkedList;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.Node;
 
 public class DoublyEndedLinkedListTest {
 

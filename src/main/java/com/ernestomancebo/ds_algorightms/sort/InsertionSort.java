@@ -9,23 +9,25 @@ package com.ernestomancebo.ds_algorightms.sort;
  * @author Ernesto Mancebo
  *
  */
-public class InsertionSort implements Sorter {
+public class InsertionSort<T extends Comparable<T>> implements Sorter<T> {
 
 	/**
 	 * Does the Insertion Sort algorithm. Takes a gap interval as parameter
 	 */
-	public void sort(int[] data, int startPosition, int gap) {
+	public T[] sort(T[] data, int startPosition, int gap) {
 
 		for (int i = startPosition; i < data.length; i += gap) {
-			int currentItem = data[i];
+			T currentItem = data[i];
 			int j = i - gap;
 
-			while (j >= startPosition && data[j] > currentItem) {
+			while (j >= startPosition && data[j].compareTo(currentItem) > 0) {
 				data[j + gap] = data[j];
 				j -= gap;
 			}
 			data[j + gap] = currentItem;
 		}
+
+		return data;
 	}
 
 	/**
@@ -33,8 +35,8 @@ public class InsertionSort implements Sorter {
 	 * 
 	 * @see com.ernestomancebo.ds_algorightms.sort.Sorter#sort(int[])
 	 */
-	public void sort(int[] data) {
-		sort(data, 0, 1);
+	public T[] sort(T[] data) {
+		return sort(data, 0, 1);
 	}
 
 }

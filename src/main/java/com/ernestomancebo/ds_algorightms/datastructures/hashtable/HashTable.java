@@ -1,7 +1,7 @@
 package com.ernestomancebo.ds_algorightms.datastructures.hashtable;
 
 import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.HashLinkedList;
-import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.HashNode;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.HashNode;
 
 /**
  * Implementation of a hash table. Supports {@link String} as key so far.
@@ -15,7 +15,7 @@ public class HashTable<k, v> {
 
     // HASH TABLES 101 :D
     private final int HASH_MAX = 101;
-    private final HashLinkedList<k, v>[] hashArray;
+    private HashLinkedList<k, v>[] hashArray;
 
     public HashTable() {
         hashArray = new HashLinkedList[HASH_MAX];

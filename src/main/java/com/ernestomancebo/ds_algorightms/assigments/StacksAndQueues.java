@@ -1,7 +1,7 @@
 package com.ernestomancebo.ds_algorightms.assigments;
 
-import com.ernestomancebo.ds_algorightms.datastructures.doublyendedlinkedlist.DoublyEndedLinkedList;
-import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.Node;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.DoublyEndedLinkedList;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.Node;
 
 public class StacksAndQueues {
 

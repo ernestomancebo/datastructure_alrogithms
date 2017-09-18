@@ -8,10 +8,10 @@ public class BubbleSortTest {
 
 	@Test
 	public void sortAssertPasses() {
-		int[] inputValues = { 9, 3, 5, 1, 8 };
-		final int[] resultValues = { 1, 3, 5, 8, 9 };
+		Integer[] inputValues = { 9, 3, 5, 1, 8 };
+		final Integer[] resultValues = { 1, 3, 5, 8, 9 };
 
-		BubbleSort sorter = new BubbleSort();
+		BubbleSort<Integer> sorter = new BubbleSort<>();
 		sorter.sort(inputValues);
 
 		assertArrayEquals(inputValues, resultValues);

@@ -6,7 +6,7 @@ package com.ernestomancebo.ds_algorightms.sort;
  * @author admin
  *
  */
-public interface Sorter {
+public interface Sorter <T extends Comparable<T>>{
 
-	public void sort(int[] data);
+	public T[] sort(T[] data);
 }

@@ -1,4 +1,4 @@
-package com.ernestomancebo.ds_algorightms.sort.search;
+package com.ernestomancebo.ds_algorightms.sort;
 
 public class BinarySearch {
 

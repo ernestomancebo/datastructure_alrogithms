@@ -4,7 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.Node;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.SortedLinkedList;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.Node;
 
 public class SortedLinkedListTest {
 	@Test

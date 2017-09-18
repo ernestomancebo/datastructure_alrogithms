@@ -1,6 +1,6 @@
-package com.ernestomancebo.ds_algorightms.datastructures.sortedlinkedlist;
+package com.ernestomancebo.ds_algorightms.datastructures.linkedlist;
 
-import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.Node;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.Node;
 
 public class SortedLinkedList {
 

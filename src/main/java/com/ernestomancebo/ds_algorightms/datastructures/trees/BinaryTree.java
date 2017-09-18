@@ -1,5 +1,7 @@
 package com.ernestomancebo.ds_algorightms.datastructures.trees;
 
+import com.ernestomancebo.ds_algorightms.datastructures.trees.node.TreeNode;
+
 public class BinaryTree<T extends Comparable<T>> {
 
     protected TreeNode<T> root;

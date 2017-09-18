@@ -1,5 +1,7 @@
 package com.ernestomancebo.ds_algorightms.datastructures.linkedlist;
 
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.Node;
+
 public class LinkedList {
 	private Node headNode;
 

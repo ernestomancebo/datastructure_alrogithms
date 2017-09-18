@@ -9,22 +9,24 @@ package com.ernestomancebo.ds_algorightms.sort;
  * @author Ernesto Mancebo
  *
  */
-public class SelectionSort implements Sorter {
+public class SelectionSort<T extends Comparable<T>> implements Sorter<T> {
 
-	public void sort(int[] data) {
+	public T[] sort(T[] data) {
 		for (int i = 0; i < data.length - 1; i++) {
 			int indexOfSmallest = i;
 
-			for (int j = i + 1; j < data.length; j ++) {
-				if (data[j] < data[indexOfSmallest]) {
+			for (int j = i + 1; j < data.length; j++) {
+				if (data[j].compareTo(data[indexOfSmallest]) < 0) {
 					indexOfSmallest = j;
 				}
 			}
-			
-			int tmp = data[i];
+
+			T tmp = data[i];
 			data[i] = data[indexOfSmallest];
 			data[indexOfSmallest] = tmp;
 		}
+
+		return data;
 	}
 
 }

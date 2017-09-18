@@ -1,4 +1,4 @@
-package com.ernestomancebo.ds_algorightms.datastructures.linkedlist;
+package com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node;
 
 public class HashNode<k, v> {
 

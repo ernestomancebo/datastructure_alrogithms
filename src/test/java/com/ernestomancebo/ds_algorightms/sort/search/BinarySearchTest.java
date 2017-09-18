@@ -5,6 +5,8 @@ import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
+import com.ernestomancebo.ds_algorightms.sort.BinarySearch;
+
 public class BinarySearchTest {
 
 	@Test

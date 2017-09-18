@@ -1,6 +1,6 @@
-package com.ernestomancebo.ds_algorightms.datastructures.doublyendedlinkedlist;
+package com.ernestomancebo.ds_algorightms.datastructures.linkedlist;
 
-import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.Node;
+import com.ernestomancebo.ds_algorightms.datastructures.linkedlist.node.Node;
 
 public class DoublyEndedLinkedList {
 

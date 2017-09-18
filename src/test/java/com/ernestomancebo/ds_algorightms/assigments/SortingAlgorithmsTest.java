@@ -4,41 +4,48 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.ernestomancebo.ds_algorightms.sort.CountingSort;
+import com.ernestomancebo.ds_algorightms.sort.QuickSort;
+import com.ernestomancebo.ds_algorightms.sort.ShellSort;
+
 public class SortingAlgorithmsTest {
-	SortingAlgorithms sortingAlg = new SortingAlgorithms();
 
 	@Test
 	public void testQuickSort() {
-		int[] unsortedArray = { 8, 5, 18, 45, 77, 65, 9, 5 };
-		int[] sortedArray = { 5, 5, 8, 9, 18, 45, 65, 77 };
+		Integer[] unsortedArray = { 8, 5, 18, 45, 77, 65, 9, 5 };
+		Integer[] sortedArray = { 5, 5, 8, 9, 18, 45, 65, 77 };
+		QuickSort<Integer> quickSort = new QuickSort<>();
 
-		sortingAlg.quickSort(unsortedArray, 0, unsortedArray.length - 1);
+		quickSort.sort(unsortedArray, 0, unsortedArray.length - 1);
 		assertArrayEquals(sortedArray, unsortedArray);
 	}
 
 	@Test
 	public void testShellSort() {
+		ShellSort<Integer> shellSort = new ShellSort<>();
+
 		// First group
-		int[] unsortedArray1 = { 8, 5, 18, 45, 77, 65, 9, 5 };
-		int[] sortedArray1 = { 5, 5, 8, 9, 18, 45, 65, 77 };
+		Integer[] unsortedArray1 = { 8, 5, 18, 45, 77, 65, 9, 5 };
+		Integer[] sortedArray1 = { 5, 5, 8, 9, 18, 45, 65, 77 };
 
 		// Second group
-		int[] unsortedArray2 = { 9, 3, 5, 1, 8 };
-		final int[] sortedArray2 = { 1, 3, 5, 8, 9 };
+		Integer[] unsortedArray2 = { 9, 3, 5, 1, 8 };
+		final Integer[] sortedArray2 = { 1, 3, 5, 8, 9 };
 
-		sortingAlg.shellSort(unsortedArray1);
+		shellSort.sort(unsortedArray1);
 		assertArrayEquals(sortedArray1, unsortedArray1);
 
-		sortingAlg.shellSort(unsortedArray2);
+		shellSort.sort(unsortedArray2);
 		assertArrayEquals(sortedArray2, unsortedArray2);
 	}
 
 	@Test
 	public void testCountingSort() {
-		int[] unsortedArray = { 8, 5, 18, 45, 77, 65, 9, 5 };
-		int[] sortedArray = { 5, 5, 8, 9, 18, 45, 65, 77 };
+		Integer[] unsortedArray = { 8, 5, 18, 45, 77, 65, 9, 5 };
+		Integer[] sortedArray = { 5, 5, 8, 9, 18, 45, 65, 77 };
+		CountingSort countingSort = new CountingSort();
 
-		int[] resultArray = sortingAlg.countingSort(unsortedArray);
+		Integer[] resultArray = countingSort.sort(unsortedArray);
 		assertArrayEquals(sortedArray, resultArray);
 	}
 }

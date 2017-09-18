@@ -1,4 +1,4 @@
-package com.ernestomancebo.ds_algorightms.datastructures.trees;
+package com.ernestomancebo.ds_algorightms.datastructures.trees.node;
 
 import java.util.Arrays;
 

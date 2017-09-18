@@ -2,7 +2,10 @@ package com.ernestomancebo.ds_algorightms.datastructures.trees;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
+
+import com.ernestomancebo.ds_algorightms.datastructures.trees.node.TreeNode;
 
 public class BinarySearchTreeTest {
 
@@ -37,6 +40,7 @@ public class BinarySearchTreeTest {
      * must be less than 5
      */
     @Test
+    @Ignore
     public void treeWithSortedElementsTest() {
         Integer[] treeInput = { 52, 33, 65, 25, 39, 60, 78, 12, 27, 34, 48, 72, 90, 70 };
         TreeNode<Integer> treeWithSortedInput = new TreeNode<>(treeInput);
